@@ -1,18 +1,18 @@
 package main.java.model;
 
+import java.util.UUID;
+
 public class Customer {
-    private int id;
-    private double xCoordinate;
-    private double yCoordinate;
+    private UUID id;
+    private Location location;
     private int demand;
     private int serviceTime;
     private int startTimeWindow;
     private int endTimeWindow;
 
-    public Customer(int id, double xCoordinate, double yCoordinate, int demand, int serviceTime, int startTimeWindow, int endTimeWindow) {
-        this.id = id;
-        this.xCoordinate = xCoordinate;
-        this.yCoordinate = yCoordinate;
+    public Customer(Location location, int demand, int serviceTime, int startTimeWindow, int endTimeWindow) {
+        this.id = UUID.randomUUID();
+        this.location = location;
         this.demand = demand;
         this.serviceTime = serviceTime;
         this.startTimeWindow = startTimeWindow;
@@ -20,28 +20,8 @@ public class Customer {
     }
 
     // Getters and setters
-    public int getId() {
+    public UUID getId() {
         return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public double getxCoordinate() {
-        return xCoordinate;
-    }
-
-    public void setxCoordinate(double xCoordinate) {
-        this.xCoordinate = xCoordinate;
-    }
-
-    public double getyCoordinate() {
-        return yCoordinate;
-    }
-
-    public void setyCoordinate(double yCoordinate) {
-        this.yCoordinate = yCoordinate;
     }
 
     public int getDemand() {
@@ -74,5 +54,13 @@ public class Customer {
 
     public void setEndTimeWindow(int endTimeWindow) {
         this.endTimeWindow = endTimeWindow;
+    }
+
+    public Location getLocation() {
+        return this.location;
+    }
+
+    public void setLocation(Location location) {
+        this.location = location;
     }
 }
