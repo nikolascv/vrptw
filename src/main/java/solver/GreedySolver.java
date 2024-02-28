@@ -14,7 +14,7 @@ public class GreedySolver implements VRPSolver {
     public List<Route> solve(List<Customer> customers, List<Vehicle> vehicles) {
         List<Route> routes = new ArrayList<>();
         
-        Location depot_location = new Location(0.0, 0.0, 0);
+        Location depot_location = new Location(0.0, 0.0);
         Customer depot = new Customer(depot_location, 0, 0, 0, 100000);
 
         for (Vehicle vehicle : vehicles) {

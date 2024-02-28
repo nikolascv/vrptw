@@ -2,26 +2,21 @@ package main.java.model;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.UUID;
 
 public class Vehicle {
-    private int id;
+    private UUID id;
     private int capacity;
-    private int maxRouteDuration;
     private List<Customer> route;
 
-    public Vehicle(int id, int capacity, int maxRouteDuration) {
-        this.id = id;
+    public Vehicle(int capacity) {
+        this.id = UUID.randomUUID();
         this.capacity = capacity;
-        this.maxRouteDuration = maxRouteDuration;
         this.route = new ArrayList<>();
     }
 
-    public int getId() {
+    public UUID getId() {
         return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
     }
 
     public int getCapacity() {
@@ -30,14 +25,6 @@ public class Vehicle {
 
     public void setCapacity(int capacity) {
         this.capacity = capacity;
-    }
-
-    public int getMaxRouteDuration() {
-        return maxRouteDuration;
-    }
-
-    public void setMaxRouteDuration(int maxRouteDuration) {
-        this.maxRouteDuration = maxRouteDuration;
     }
 
     public List<Customer> getRoute() {
@@ -57,7 +44,6 @@ public class Vehicle {
         return "Vehicle{" +
                 "id=" + id +
                 ", capacity=" + capacity +
-                ", maxRouteDuration=" + maxRouteDuration +
                 ", route=" + route +
                 '}';
     }
