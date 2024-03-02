@@ -37,5 +37,3 @@ public class GreedySolver implements VRPSolver {
         return routes;
     }
 }
-
-
