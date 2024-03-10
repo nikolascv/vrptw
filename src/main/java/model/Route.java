@@ -2,7 +2,6 @@ package main.java.model;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.math.*;
 
 public class Route {
     private List<Customer> customers;
@@ -41,7 +40,7 @@ public class Route {
 
     public void addCustomer(Customer customer) {
         this.customers.add(customer);
-        calculateCost(this.customers);
+        this.cost = calculateCost(this.customers);
     }
 
     public double getCost() {

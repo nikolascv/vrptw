@@ -63,4 +63,11 @@ public class Customer {
     public void setLocation(Location location) {
         this.location = location;
     }
+
+    public double calculateDistance(Customer customer) {
+        double x_dist = this.getLocation().getxCoordinate() - customer.getLocation().getxCoordinate();
+        double y_dist = this.getLocation().getyCoordinate() - customer.getLocation().getyCoordinate();
+
+        return Math.sqrt(Math.pow(x_dist, 2) + Math.pow(y_dist, 2));
+    }
 }

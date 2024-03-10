@@ -1,10 +1,11 @@
 package main.java.test;
 
+import com.google.ortools.linearsolver.MPSolver;
 import main.java.model.Customer;
 import main.java.model.Location;
 import main.java.model.Route;
 import main.java.model.Vehicle;
-import main.java.solver.GreedySolver;
+import main.java.solver.TestSolver;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -18,13 +19,14 @@ public class VRPTest {
         List<Vehicle> vehicles = createVehicles("1");
         
         // Step 2: Instantiate solver
-        GreedySolver solver = new GreedySolver();
+        TestSolver solver = new TestSolver(customers, vehicles);
         
         // Step 3: Run solver
-        List<Route> solution = solver.solve(customers, vehicles);
+        MPSolver.ResultStatus solution = solver.solve(solver.getCosts(), solver.getEarliest(), solver.getLatest(), vehicles, customers);
         
         // Step 4: Output results
-        displaySolution(solution);
+        // displaySolution(solution);
+        System.out.println(solution);
     }
 
     // Helper method to create sample depots
@@ -89,7 +91,7 @@ public class VRPTest {
             for (Customer c : route.getCustomers()) {
                 System.out.println(c.getId());
             }
-            // System.out.println(route);
+            System.out.println(route.getCost());
         }
     }
 }

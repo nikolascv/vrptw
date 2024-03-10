@@ -1,10 +1,10 @@
 package main.java.solver;
 
-import main.java.model.Route;
+import com.google.ortools.linearsolver.MPSolver;
 import main.java.model.Vehicle;
 import main.java.model.Customer;
 import java.util.List;
 
 public interface VRPSolver {
-    List<Route> solve(List<Customer> customers, List<Vehicle> vehicles);
+    MPSolver.ResultStatus solve(double[][] costs, int[] earliest, int[] latest, List<Vehicle> vehicles, List<Customer> customers);
 }

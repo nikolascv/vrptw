@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="or-tools_x86_64_macOS-14.1_java_v9.8">
+    <CLASSES>
+      <root url="file://$USER_HOME$/Downloads/or-tools_x86_64_macOS-14.1_java_v9.8.3296" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="file://$USER_HOME$/Downloads/or-tools_x86_64_macOS-14.1_java_v9.8.3296" />
+    </SOURCES>
+    <jarDirectory url="file://$USER_HOME$/Downloads/or-tools_x86_64_macOS-14.1_java_v9.8.3296" recursive="false" />
+    <jarDirectory url="file://$USER_HOME$/Downloads/or-tools_x86_64_macOS-14.1_java_v9.8.3296" recursive="false" type="SOURCES" />
+  </library>
+</component>
